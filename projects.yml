@@ -1,0 +1,36 @@
+---
+- name: Split
+  emoji: 💸
+  description: Split monzo spending
+  url: https://split.gnab.fr
+  repo: n6g7/split
+- name: Cat
+  emoji: 🐈
+  description: Un chat
+  url: https://cat.gnab.fr
+  repo: n6g7/cat
+- name: Cookbook
+  emoji: 🍳
+  description: Recipe collection
+  url: https://cook.gnab.fr
+  repo: n6g7/cookbook
+- name: Notes
+  emoji: 📓
+  description: A geeky notebook
+  url: https://notes.gnab.fr
+  repo: n6g7/notes
+- name: Tint
+  emoji: 🖼️
+  description: Colour extractor
+  url: https://tint.gnab.fr
+  repo: n6g7/tint
+- name: Chapter
+  emoji: 📚
+  description: Book shelves
+  url: https://chapter.gnab.fr
+  repo: n6g7/chapter
+- name: Wikitranslate
+  emoji: 💬
+  description: A smart translator
+  url: https://translate.gnab.fr
+  repo: wikitranslate/wikitranslate

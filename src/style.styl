@@ -1,0 +1,34 @@
+containerWidth = 800px
+spacing = 10px
+
+body
+  margin: 0
+
+h1
+  font-size: 1.2em
+  text-align: center
+
+h2
+  font-size: inherit
+  margin: 0
+
+table
+  margin: auto
+  width: containerWidth
+
+  thead
+    td, th
+      font-size: 0.9em
+      font-variant: small-caps
+
+  @media (max-width: containerWidth)
+    width: 100%
+
+.loading
+  background: url('./loader.svg')
+  display: inline-block
+
+.error
+  border-bottom: 1px #cccccc solid
+  display: inline-block
+  width: 2*spacing

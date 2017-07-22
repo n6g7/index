@@ -1,0 +1,90 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+import moment from 'moment'
+
+import loader from './loader.svg'
+
+class Project extends React.PureComponent {
+  constructor (props) {
+    super(props)
+
+    this.state = props.project
+  }
+
+  componentDidMount () {
+    this.setState({ loading: true })
+
+    window.fetch(`https://api.github.com/repos/${this.state.repo}`)
+    .then(res => {
+      if (res.ok) return res
+      else throw new Error('Meh')
+    })
+    .then(res => res.json())
+    .then(data => this.setState({
+      gh: {
+        created_at: moment(data.created_at),
+        full_name: data.full_name,
+        pushed_at: moment(data.pushed_at),
+        html_url: data.html_url
+      },
+      loading: false
+    }))
+    .catch(() => this.setState({ loading: false }))
+  }
+
+  renderRepo () {
+    const { gh, repo } = this.state
+
+    return (gh && gh.html_url && gh.full_name)
+      ? <a href={gh.html_url}>{gh.full_name}</a>
+      : <span>{repo}</span>
+  }
+
+  renderStartDate () {
+    const { gh, loading } = this.state
+
+    return (gh && gh.created_at)
+      ? <span>{gh.created_at.format('LL')}</span>
+      : loading
+        ? <img src={loader} alt='loader' />
+        : <span className='error' />
+  }
+
+  renderLastActivityDate () {
+    const { gh, loading } = this.state
+
+    return (gh && gh.pushed_at)
+      ? <span>{gh.pushed_at.format('LL')}</span>
+      : loading
+        ? <span />
+        : <span className='error' />
+  }
+
+  render () {
+    const {
+      description,
+      emoji,
+      name,
+      url
+    } = this.state
+
+    return <tr>
+      <td>
+        <h2>{emoji} {name}</h2>
+        {description}
+      </td>
+      <td>
+        <a href={url}>{url}</a>
+      </td>
+      <td>{ this.renderRepo() }</td>
+      <td>{ this.renderStartDate() }</td>
+      <td>{ this.renderLastActivityDate() }</td>
+    </tr>
+  }
+}
+
+Project.propTypes = {
+  project: PropTypes.object.isRequired
+}
+
+export default Project
