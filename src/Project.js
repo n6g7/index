@@ -32,6 +32,15 @@ class Project extends React.PureComponent {
     .catch(() => this.setState({ loading: false }))
   }
 
+  renderURL () {
+    const { url } = this.state
+    const result = url.match(/^https?:\/\/([a-z0-9.-]+)(\/.+)?$/)
+
+    return <a href={url}>
+      {result ? result[1] : url}
+    </a>
+  }
+
   renderRepo () {
     const { gh, repo } = this.state
 
@@ -73,9 +82,7 @@ class Project extends React.PureComponent {
         <h2>{emoji} {name}</h2>
         {description}
       </td>
-      <td>
-        <a href={url}>{url}</a>
-      </td>
+      <td>{ this.renderURL() }</td>
       <td>{ this.renderRepo() }</td>
       <td>{ this.renderStartDate() }</td>
       <td>{ this.renderLastActivityDate() }</td>
