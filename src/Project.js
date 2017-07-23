@@ -4,6 +4,8 @@ import moment from 'moment'
 
 import loader from './loader.svg'
 
+const aMonthAgo = moment().subtract(1, 'month')
+
 class Project extends React.PureComponent {
   constructor (props) {
     super(props)
@@ -73,13 +75,16 @@ class Project extends React.PureComponent {
     const {
       description,
       emoji,
+      gh,
       name,
       url
     } = this.state
 
+    const isNew = gh && gh.created_at && gh.created_at.isAfter(aMonthAgo)
+
     return <tr>
       <td>
-        <h3>{emoji} {name}</h3>
+        <h3 className={ isNew ? 'new' : ''}>{emoji} {name}</h3>
         <p>{description}</p>
       </td>
       <td>{ this.renderURL() }</td>
