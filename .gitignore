@@ -1,3 +1,4 @@
 dist/*
 !dist/index.html
+!dist/keybase.txt
 node_modules

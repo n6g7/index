@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/n6g7
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://gnab.fr
+  * I am n6g7 (https://keybase.io/n6g7) on keybase.
+  * I have a public key ASA4lQ2_-QOAbXdA1jwtAF2RxudSA3A2P_kms6wsM5sg-go
+
+To do so, I am signing this object:
+
+{
+    &quot;body&quot;: {
+        &quot;key&quot;: {
+            &quot;eldest_kid&quot;: &quot;0101e5435aaef04d9023f81869f9e5c659f9f604fa1667479eef903f367e022d82270a&quot;,
+            &quot;host&quot;: &quot;keybase.io&quot;,
+            &quot;kid&quot;: &quot;012038950dbff903806d7740d63c2d005d91c6e7520370363ff926b3ac2c339b20fa0a&quot;,
+            &quot;uid&quot;: &quot;fff44f36a52acdd457402749f0092619&quot;,
+            &quot;username&quot;: &quot;n6g7&quot;
+        },
+        &quot;merkle_root&quot;: {
+            &quot;ctime&quot;: 1500825989,
+            &quot;hash&quot;: &quot;562d41b69c6a6a4d34006e58e25cef6a8c054d87fbd30adbac2fcf7a6ac0320596abe243ffc7ddbd2c76cb8dfcd2c81a05b4f656c9bb3f5d75c9789e7efa1055&quot;,
+            &quot;hash_meta&quot;: &quot;44157bbeb678f9e865678c53e12a124c50352b2f2c2b1344d337d7ce5c3ed23e&quot;,
+            &quot;seqno&quot;: 1274002
+        },
+        &quot;service&quot;: {
+            &quot;hostname&quot;: &quot;gnab.fr&quot;,
+            &quot;protocol&quot;: &quot;https:&quot;
+        },
+        &quot;type&quot;: &quot;web_service_binding&quot;,
+        &quot;version&quot;: 1
+    },
+    &quot;client&quot;: {
+        &quot;name&quot;: &quot;keybase.io go client&quot;,
+        &quot;version&quot;: &quot;1.0.25&quot;
+    },
+    &quot;ctime&quot;: 1500826151,
+    &quot;expire_in&quot;: 504576000,
+    &quot;prev&quot;: &quot;0bc9677ae2100c11fa4542eb3c3f2c7348a559d74c6510a2767fb7aee39342d2&quot;,
+    &quot;seqno&quot;: 22,
+    &quot;tag&quot;: &quot;signature&quot;
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgOJUNv/kDgG13QNY8LQBdkcbnUgNwNj/5JrOsLDObIPoKp3BheWxvYWTFAzx7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxZTU0MzVhYWVmMDRkOTAyM2Y4MTg2OWY5ZTVjNjU5ZjlmNjA0ZmExNjY3NDc5ZWVmOTAzZjM2N2UwMjJkODIyNzBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMzg5NTBkYmZmOTAzODA2ZDc3NDBkNjNjMmQwMDVkOTFjNmU3NTIwMzcwMzYzZmY5MjZiM2FjMmMzMzliMjBmYTBhIiwidWlkIjoiZmZmNDRmMzZhNTJhY2RkNDU3NDAyNzQ5ZjAwOTI2MTkiLCJ1c2VybmFtZSI6Im42ZzcifSwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE1MDA4MjU5ODksImhhc2giOiI1NjJkNDFiNjljNmE2YTRkMzQwMDZlNThlMjVjZWY2YThjMDU0ZDg3ZmJkMzBhZGJhYzJmY2Y3YTZhYzAzMjA1OTZhYmUyNDNmZmM3ZGRiZDJjNzZjYjhkZmNkMmM4MWEwNWI0ZjY1NmM5YmIzZjVkNzVjOTc4OWU3ZWZhMTA1NSIsImhhc2hfbWV0YSI6IjQ0MTU3YmJlYjY3OGY5ZTg2NTY3OGM1M2UxMmExMjRjNTAzNTJiMmYyYzJiMTM0NGQzMzdkN2NlNWMzZWQyM2UiLCJzZXFubyI6MTI3NDAwMn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJnbmFiLmZyIiwicHJvdG9jb2wiOiJodHRwczoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMjUifSwiY3RpbWUiOjE1MDA4MjYxNTEsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJwcmV2IjoiMGJjOTY3N2FlMjEwMGMxMWZhNDU0MmViM2MzZjJjNzM0OGE1NTlkNzRjNjUxMGEyNzY3ZmI3YWVlMzkzNDJkMiIsInNlcW5vIjoyMiwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEBX0kyo3Q9Lzt0kx313naZI1MfFZAc9gfgg0Lva5e371FDAdjRC06hp0K2BwML+1Nzt6rVo5UsQHYmWhyIiWGQPqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgvJBj2yMgVK75umJ3++Sx8fSThc5lHz8fh4rcqFh+H+yjdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/n6g7
+
+==================================================================
