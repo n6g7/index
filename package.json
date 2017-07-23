@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "NODE_ENV=production webpack",
+    "deploy": "firebase deploy",
     "dev": "webpack-dashboard -- webpack-dev-server",
     "pretest": "standard"
   },
