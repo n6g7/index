@@ -79,7 +79,7 @@ class Project extends React.PureComponent {
 
     return <tr>
       <td>
-        <h2>{emoji} {name}</h2>
+        <h3>{emoji} {name}</h3>
         {description}
       </td>
       <td>{ this.renderURL() }</td>
