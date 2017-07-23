@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Zilla+Slab:400,600,700')
 
 containerWidth = 800px
+grey = #cccccc
 spacing = 10px
 
 body
@@ -9,20 +10,27 @@ body
 
 h1
   font-size: 1.2em
+  margin: 3*spacing 0
   text-align: center
 
 h2
   font-size: inherit
+  line-height: 1
   margin: 0
-
 table
+  border-collapse: collapse
   margin: auto
   width: containerWidth
 
   thead
     td, th
+      border-bottom: 1px solid grey
       font-size: 0.9em
       font-variant: small-caps
+
+  tbody td
+    border-bottom: 1px solid #eeeeee
+    padding: spacing 0
 
   @media (max-width: containerWidth)
     width: 100%
@@ -32,6 +40,6 @@ table
   display: inline-block
 
 .error
-  border-bottom: 1px #cccccc solid
+  border-bottom: 1px grey solid
   display: inline-block
   width: 2*spacing
