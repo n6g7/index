@@ -33,10 +33,10 @@ class Project extends React.PureComponent {
   }
 
   renderURL () {
-    const { url } = this.state
+    const { name, url } = this.state
     const result = url.match(/^https?:\/\/([a-z0-9.-]+)(\/.+)?$/)
 
-    return <a href={url}>
+    return <a href={url} title={name}>
       {result ? result[1] : url}
     </a>
   }

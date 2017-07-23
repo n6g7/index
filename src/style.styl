@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Zilla+Slab:400,600,700')
 
+blue = #2980b9
 containerWidth = 800px
 grey = #cccccc
 spacing = 10px
@@ -10,13 +11,25 @@ body
 
 h1
   font-size: 1.2em
-  margin: 3*spacing 0
+  margin: 3*spacing 0 0
   text-align: center
 
 h2
   font-size: inherit
   line-height: 1
   margin: 0
+
+a
+  &:link, &:visited
+    border-bottom: 1px solid blue
+    color: blue
+    text-decoration: none
+    text-shadow: 2px 2px 0px white, -2px 2px 0px white
+    transition: 0.5s
+
+  &:hover
+    opacity: 0.8
+
 table
   border-collapse: collapse
   margin: auto
