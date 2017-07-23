@@ -5,7 +5,7 @@
   "author": "Nathan Gaberel <nathan@gnab.fr>",
   "license": "MIT",
   "scripts": {
-    "build": "NODE_ENV=production webpack",
+    "build": "NODE_ENV=production webpack -p",
     "deploy": "firebase deploy",
     "dev": "webpack-dashboard -- webpack-dev-server",
     "pretest": "standard"
