@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import moment from 'moment'
+import moment from 'moment-he'
 
 import loader from './loader.svg'
 
@@ -55,7 +55,7 @@ class Project extends React.PureComponent {
     const { gh, loading } = this.state
 
     return (gh && gh.created_at)
-      ? <span>{gh.created_at.format('LL')}</span>
+      ? <span>{gh.created_at.humanEra('LL')}</span>
       : loading
         ? <img src={loader} alt='loader' />
         : <span className='error' />
@@ -65,7 +65,7 @@ class Project extends React.PureComponent {
     const { gh, loading } = this.state
 
     return (gh && gh.pushed_at)
-      ? <span>{gh.pushed_at.format('LL')}</span>
+      ? <span>{gh.pushed_at.humanEra('LL')}</span>
       : loading
         ? <span />
         : <span className='error' />
