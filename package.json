@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "moment": "^2.18.1",
-    "moment-he": "^0.1.0",
+    "moment-he": "^0.2.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
