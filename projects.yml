@@ -1,4 +1,9 @@
 ---
+- name: Bataille
+  emoji: 🃏
+  description: Card game simulator
+  url: https://bataille-umpozclhim.now.sh
+  repo: n6g7/bataille
 - name: Auto Kaizen
   emoji: 📈
   description: Defect tracking on Trello
