@@ -33,6 +33,10 @@ const ErrorSpan = styled.span`
 const aMonthAgo = moment().subtract(1, 'month')
 
 class Project extends React.PureComponent {
+  static propTypes = {
+    project: PropTypes.object.isRequired
+  }
+
   constructor (props) {
     super(props)
 
@@ -119,10 +123,6 @@ class Project extends React.PureComponent {
       <td>{ this.renderLastActivityDate() }</td>
     </tr>
   }
-}
-
-Project.propTypes = {
-  project: PropTypes.object.isRequired
 }
 
 export default Project
