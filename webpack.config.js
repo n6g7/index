@@ -2,12 +2,15 @@ const path = require('path')
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
-  entry: './index.js',
+  entry: {
+    main: './index.js',
+    head: './head.js'
+  },
   mode: process.env.NODE_ENV,
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: '[name].bundle.js'
   },
   module: {
     rules: [
@@ -16,15 +19,6 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           'babel-loader'
-        ]
-      },
-      {
-        test: /\.styl(us)?$/,
-        exclude: /node_modules/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'stylus-loader'
         ]
       },
       {

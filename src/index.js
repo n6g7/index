@@ -1,11 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { ThemeProvider } from 'styled-components'
 
 import List from './List'
-
-import './style.styl'
+import theme from './theme'
 
 ReactDOM.render(
-  <List />,
+  <ThemeProvider theme={theme}>
+    <List />
+  </ThemeProvider>,
   document.getElementById('root')
 )

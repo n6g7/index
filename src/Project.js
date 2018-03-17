@@ -1,8 +1,34 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import moment from 'moment-he'
+import styled, { css } from 'styled-components'
 
 import loader from './loader.svg'
+
+const Title = styled.h3`
+  font-size: inherit;
+  line-height: 1;
+  margin: 0;
+
+  ${p => p.new && css`
+    &::after {
+      background: ${p.theme.colours.yellow};
+      border-radius: 3px;
+      color: white;
+      content: 'New!';
+      font-size: 0.7em;
+      font-weight: normal;
+      margin: 0 ${p.theme.spacing/2}px;
+      padding: 2px 5px;
+    }
+  `}
+`
+
+const ErrorSpan = styled.span`
+  border-bottom: 1px ${p => p.theme.colours.grey} solid;
+  display: inline-block;
+  width: ${p => 2 * p.theme.spacing}px;
+`
 
 const aMonthAgo = moment().subtract(1, 'month')
 
@@ -58,7 +84,7 @@ class Project extends React.PureComponent {
       ? <span>{gh.created_at.humanEra('LL')}</span>
       : loading
         ? <img src={loader} alt='loader' />
-        : <span className='error' />
+        : <ErrorSpan />
   }
 
   renderLastActivityDate () {
@@ -68,7 +94,7 @@ class Project extends React.PureComponent {
       ? <span>{gh.pushed_at.humanEra('LL')}</span>
       : loading
         ? <span />
-        : <span className='error' />
+        : <ErrorSpan />
   }
 
   render () {
@@ -84,7 +110,7 @@ class Project extends React.PureComponent {
 
     return <tr>
       <td>
-        <h3 className={ isNew ? 'new' : ''}>{emoji} {name}</h3>
+        <Title new={isNew}>{emoji} {name}</Title>
         <p>{description}</p>
       </td>
       <td>{ this.renderURL() }</td>

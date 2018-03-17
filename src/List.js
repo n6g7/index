@@ -1,11 +1,39 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import Project from './Project'
 import projects from '../projects.yml'
 
+const Table = styled.table`
+  border-collapse: collapse;
+  margin: auto;
+  width: ${p => p.theme.containerWidth}px;
+
+  thead {
+    td, th {
+      border-bottom: 1px solid ${p => p.theme.colours.grey};
+      font-size: 0.9em;
+      font-variant: small-caps;
+    }
+  }
+
+  tbody td {
+    border-bottom: 1px solid ${p => p.theme.colours.border};
+    padding: ${p => p.theme.spacing}px 0;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  @media (max-width: ${p => p.theme.containerWidth}px) {
+    width: 100%
+  }
+`
+
 class List extends React.PureComponent {
   render () {
-    return <table>
+    return <Table>
       <thead>
         <tr>
           <th>Project</th>
@@ -20,7 +48,7 @@ class List extends React.PureComponent {
           <Project key={i} project={project} />
         )}
       </tbody>
-    </table>
+    </Table>
   }
 }
 
