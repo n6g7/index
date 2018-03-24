@@ -9,6 +9,6 @@ export default {
     family: "'Zilla Slab', serif",
     url: 'https://fonts.googleapis.com/css?family=Zilla+Slab:400,600,700'
   },
-  containerWidth: 800,
+  containerWidth: 900,
   spacing: 10
 }
