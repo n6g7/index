@@ -1,4 +1,5 @@
 import { injectGlobal } from 'styled-components'
+import Color from 'color'
 import theme from './theme'
 
 injectGlobal`
@@ -26,17 +27,26 @@ injectGlobal`
 
   a {
     &:link, &:visited {
-      border-bottom: 1px solid ${theme.colours.blue};
       color: ${theme.colours.blue};
+      position: relative;
       text-decoration: none;
-      text-shadow:
-        0px 1px 0px white, 1px 1px 0px white, - 1px 1px 0px white,
-        0px 2px 0px white, 1px 2px 0px white, - 1px 2px 0px white;
-      transition: 0.5s;
+      transition: 0.2s;
+
+      &::after {
+        background: ${theme.colours.blue};
+        bottom: -2px;
+        content: '';
+        height: 1px;
+        left: 0;
+        position: absolute;
+        transition: inherit;
+        width: 100%;
+      }
     }
 
-    &:hover {
-      opacity: 0.8;
+    &:hover::after {
+      background: ${Color(theme.colours.blue).alpha(0.15).string()};
+      height: ${2*theme.spacing}px;
     }
   }
 `

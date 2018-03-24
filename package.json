@@ -11,6 +11,7 @@
     "pretest": "standard"
   },
   "dependencies": {
+    "color": "^3.0.0",
     "moment": "^2.21.0",
     "moment-he": "^0.2.0",
     "react": "^16.2.0",
