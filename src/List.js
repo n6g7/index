@@ -21,6 +21,13 @@ const Table = styled.table`
     border-bottom: 1px solid ${p => p.theme.colours.border};
     padding: ${p => p.theme.spacing}px 0;
 
+    &:not(:first-child) {
+      padding-left: ${p => p.theme.spacing / 2}px;
+    }
+    &:not(:last-child) {
+      padding-right: ${p => p.theme.spacing / 2}px;
+    }
+
     p {
       margin: 0;
     }
