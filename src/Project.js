@@ -15,9 +15,10 @@ const Title = styled.h3`
       background: ${p.theme.colours.yellow};
       border-radius: 3px;
       color: white;
-      content: 'New!';
-      font-size: 0.7em;
-      font-weight: normal;
+      content: 'New';
+      font-size: 0.8em;
+      font-weight: bolder;
+      letter-spacing: 0.5px;
       margin: 0 ${p.theme.spacing/2}px;
       padding: 2px 5px;
     }
