@@ -34,19 +34,21 @@ injectGlobal`
 
       &::after {
         background: ${theme.colours.blue};
-        bottom: -2px;
+        bottom: -1px;
         content: '';
-        height: 1px;
         left: 0;
         position: absolute;
+        right: 0;
+        top: 100%;
         transition: inherit;
-        width: 100%;
       }
     }
 
     &:hover::after {
       background: ${Color(theme.colours.blue).alpha(0.15).string()};
-      height: ${2*theme.spacing}px;
+      left: -2px;
+      right: -2px;
+      top: 0;
     }
   }
 `
