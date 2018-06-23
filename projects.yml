@@ -19,6 +19,11 @@
   description: Un chat
   url: https://cat.gnab.fr
   repo: n6g7/cat
+- name: redux-saga-firebase
+  emoji: 🔥
+  description: Redux-saga for firebase
+  url: https://redux-saga-firebase.js.org/
+  repo: n6g7/redux-saga-firebase
 - name: Cookbook
   emoji: 🍳
   description: Recipe collection
