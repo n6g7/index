@@ -6,7 +6,6 @@ module.exports = {
     main: './index.js',
     head: './head.js'
   },
-  mode: process.env.NODE_ENV,
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
