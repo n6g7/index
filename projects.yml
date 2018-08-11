@@ -49,3 +49,7 @@
   description: A smart translator
   url: https://translate.gnab.fr
   repo: wikitranslate/wikitranslate
+- name: Stylay
+  emoji: 👩‍🎨
+  description: Frontend stuff compiler
+  repo: n6g7/stylay
