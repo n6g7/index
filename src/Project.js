@@ -25,7 +25,7 @@ const Title = styled.h3`
   `}
 `
 
-const ErrorSpan = styled.span`
+const Empty = styled.span`
   border-bottom: 1px ${p => p.theme.colours.grey} solid;
   display: inline-block;
   width: ${p => 2 * p.theme.spacing}px;
@@ -89,7 +89,7 @@ class Project extends React.PureComponent {
       ? <span>{gh.created_at.humanEra('LL')}</span>
       : loading
         ? <img src={loader} alt='loader' />
-        : <ErrorSpan />
+        : <Empty />
   }
 
   renderLastActivityDate () {
@@ -99,7 +99,7 @@ class Project extends React.PureComponent {
       ? <span>{gh.pushed_at.humanEra('LL')}</span>
       : loading
         ? <span />
-        : <ErrorSpan />
+        : <Empty />
   }
 
   render () {
