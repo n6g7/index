@@ -67,6 +67,9 @@ class Project extends React.PureComponent {
 
   renderURL () {
     const { name, url } = this.state
+
+    if (!url) return <Empty />
+
     const result = url.match(/^https?:\/\/([a-z0-9.-]+)(\/.*)?$/)
 
     return <a href={url} title={name}>
