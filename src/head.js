@@ -1,6 +1,31 @@
-import { injectGlobal } from 'styled-components'
+import { css, injectGlobal, keyframes } from 'styled-components'
 import Color from 'color'
 import theme from './theme'
+
+const colours = [
+  '#ffffff',
+  '#fad390',
+  '#f8c291',
+  '#6a89cc',
+  '#82ccdd',
+  '#b8e994',
+  '#fa983a',
+  '#eb2f06',
+  '#1e3799',
+  '#3c6382',
+  '#38ada9'
+]
+
+const bgAnimation = keyframes`
+  0% {
+    background: #ffffff;
+  }
+  ${colours.map((col, i) => css`
+    ${Math.round((i+1)*100/colours.length)}% {
+      background: ${col};
+    }
+  `)}
+`
 
 injectGlobal`
   @import url('${theme.font.url}');
@@ -10,6 +35,7 @@ injectGlobal`
     margin: 0;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    animation: ${bgAnimation} 2s ease-out 600s alternate infinite;
   }
 
   h1 {
