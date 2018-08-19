@@ -49,7 +49,8 @@
   description: A smart translator
   url: https://translate.gnab.fr
   repo: wikitranslate/wikitranslate
-- name: Stylay
+- name: Metamorph
   emoji: 👩‍🎨
   description: Frontend stuff compiler
-  repo: n6g7/stylay
+  url: https://metamorph.charlottebretonsch.com
+  repo: n6g7/metamorph
