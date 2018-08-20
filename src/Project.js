@@ -130,10 +130,10 @@ class Project extends React.PureComponent {
         <Title new={isNew} data-emoji={emoji}>{name}</Title>
         <p>{description}</p>
       </td>
-      <td>{ this.renderURL() }</td>
-      <td>{ this.renderRepo() }</td>
-      <td>{ this.renderStartDate() }</td>
-      <td>{ this.renderLastActivityDate() }</td>
+      <td style={{"--label": '"URL"'}}>{ this.renderURL() }</td>
+      <td style={{"--label": '"Repo"'}}>{ this.renderRepo() }</td>
+      <td style={{"--label": '"Start date"'}}>{ this.renderStartDate() }</td>
+      <td style={{"--label": '"Last activity"'}}>{ this.renderLastActivityDate() }</td>
     </tr>
   }
 }

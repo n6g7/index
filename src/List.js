@@ -34,7 +34,43 @@ const Table = styled.table`
   }
 
   @media (max-width: ${p => p.theme.containerWidth}px) {
-    width: 100%
+    width: 100%;
+
+    thead {
+      display: none;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid ${p => p.theme.colours.grey};
+      display: flex;
+      flex-flow: column nowrap;
+      padding: ${p => p.theme.spacing}px 0;
+
+      &:first-child {
+        border-top: 1px solid ${p => p.theme.colours.grey};
+      }
+
+      td {
+        border: none;
+        padding: ${p => p.theme.spacing / 2}px;
+
+        &:first-child {
+          display: flex;
+          flex-flow: row nowrap;
+
+          & > :first-child {
+            margin-right: ${p => p.theme.spacing}px;
+          }
+        }
+
+        &:nth-last-child(-n+4)::before {
+          content: var(--label)": ";
+          font-size: 0.9em;
+          /* font-style: italic; */
+          opacity: 0.6;
+        }
+      }
+    }
   }
 `
 
