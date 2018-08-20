@@ -72,7 +72,7 @@ class Project extends React.PureComponent {
 
     const result = url.match(/^https?:\/\/([a-z0-9.-]+)(\/.*)?$/)
 
-    return <a href={url} title={name}>
+    return <a href={url} title={name} target="blank">
       {result ? result[1] : url}
     </a>
   }
@@ -81,7 +81,7 @@ class Project extends React.PureComponent {
     const { gh, repo } = this.state
 
     return (gh && gh.html_url && gh.full_name)
-      ? <a href={gh.html_url}>{gh.full_name}</a>
+      ? <a href={gh.html_url} target="blank">{gh.full_name}</a>
       : <span>{repo}</span>
   }
 
