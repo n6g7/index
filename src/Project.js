@@ -6,6 +6,9 @@ import styled, { css } from 'styled-components'
 import loader from './loader.svg'
 
 const Title = styled.h3`
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
   font-size: inherit;
   line-height: 1;
   margin: 0;
@@ -23,6 +26,12 @@ const Title = styled.h3`
       padding: 2px 5px;
     }
   `}
+
+  &::before {
+    content: attr(data-emoji);
+    font-size: 1.2em;
+    margin-right: 5px;
+  }
 `
 
 const Empty = styled.span`
@@ -118,7 +127,7 @@ class Project extends React.PureComponent {
 
     return <tr>
       <td>
-        <Title new={isNew}>{emoji} {name}</Title>
+        <Title new={isNew} data-emoji={emoji}>{name}</Title>
         <p>{description}</p>
       </td>
       <td>{ this.renderURL() }</td>
