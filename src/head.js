@@ -77,4 +77,20 @@ injectGlobal`
       top: 0;
     }
   }
+
+  footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: ${3*theme.spacing}px 0;
+
+    a {
+      margin: 0 ${theme.spacing}px;
+      padding: 3px 1px;
+
+      img {
+        opacity: 0.6;
+      }
+    }
+  }
 `
