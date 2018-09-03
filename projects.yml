@@ -1,4 +1,9 @@
 ---
+- name: httpdf
+  emoji: 📜
+  description: PDF over HTTP
+  url: https://hub.docker.com/r/n6g7/httpdf/
+  repo: n6g7/httpdf
 - name: Bataille
   emoji: 🃏
   description: Card game simulator
