@@ -1,46 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import moment from 'moment-he'
-import styled, { css } from 'styled-components'
 
-import loader from './loader.svg'
-
-const Title = styled.h3`
-  align-items: center;
-  display: flex;
-  flex-flow: row nowrap;
-  font-size: inherit;
-  line-height: 1;
-  margin: 0;
-
-  ${p => p.new && css`
-    &::after {
-      background: ${p.theme.colours.yellow};
-      border-radius: 3px;
-      color: white;
-      content: 'New';
-      font-size: 0.8em;
-      font-weight: bolder;
-      letter-spacing: 0.5px;
-      margin: 0 ${p.theme.spacing/2}px;
-      padding: 2px 5px;
-    }
-  `}
-
-  &::before {
-    content: attr(data-emoji);
-    font-size: 1.2em;
-    margin-right: 5px;
-  }
-`
-
-const Empty = styled.span`
-  border-bottom: 1px ${p => p.theme.colours.grey} solid;
-  display: inline-block;
-  width: ${p => 2 * p.theme.spacing}px;
-`
-
-const aMonthAgo = moment().subtract(1, 'month')
+import { Date, Link, RowTitle } from "./atoms"
 
 class Project extends React.PureComponent {
   static propTypes = {
@@ -74,18 +36,6 @@ class Project extends React.PureComponent {
     .catch(() => this.setState({ loading: false }))
   }
 
-  renderURL () {
-    const { name, url } = this.state
-
-    if (!url) return <Empty />
-
-    const result = url.match(/^https?:\/\/([a-z0-9.-]+)(\/.*)?$/)
-
-    return <a href={url} title={name} target="blank" className="homepage">
-      {result ? result[1] : url}
-    </a>
-  }
-
   renderRepo () {
     const { gh, repo } = this.state
 
@@ -94,44 +44,31 @@ class Project extends React.PureComponent {
       : <span className="repository">{repo}</span>
   }
 
-  renderStartDate () {
-    const { gh, loading } = this.state
-
-    return (gh && gh.created_at)
-      ? <span>{gh.created_at.humanEra('LL')}</span>
-      : loading
-        ? <img src={loader} alt='loader' />
-        : <Empty />
-  }
-
-  renderLastActivityDate () {
-    const { gh, loading } = this.state
-
-    return (gh && gh.pushed_at)
-      ? <span>{gh.pushed_at.humanEra('LL')}</span>
-      : loading
-        ? <span />
-        : <Empty />
-  }
-
   render () {
     const {
       description,
       emoji,
       gh,
+      loading,
       name,
+      url,
     } = this.state
-
-    const isNew = gh && gh.created_at && gh.created_at.isAfter(aMonthAgo)
 
     return <tr>
       <td>
-        <Title new={isNew} data-emoji={emoji}>{name}</Title>
+        <RowTitle date={gh && gh.created_at || null} data-emoji={emoji}>{name}</RowTitle>
         <p>{description}</p>
       </td>
-      <td className="links" style={{"--label": '"Links"'}}>{ this.renderURL() }{ this.renderRepo() }</td>
-      <td style={{"--label": '"Start date"'}}>{ this.renderStartDate() }</td>
-      <td style={{"--label": '"Last activity"'}}>{ this.renderLastActivityDate() }</td>
+      <td className="links" style={{"--label": '"Links"'}}>
+        <Link className="homepage" title={name} url={url} />
+        { this.renderRepo() }
+      </td>
+      <td style={{"--label": '"Start date"'}}>
+        <Date date={gh && gh.created_at} loading={loading} />
+      </td>
+      <td style={{"--label": '"Last activity"'}}>
+        <Date date={gh && gh.pushed_at} loading={loading} noLoader />
+      </td>
     </tr>
   }
 }
