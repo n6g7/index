@@ -14,11 +14,6 @@
   description: Defect tracking on Trello
   url: https://kaizen.gnab.fr
   repo: n6g7/autokaizen
-- name: Split
-  emoji: 💸
-  description: Split monzo spending
-  url: https://split.gnab.fr
-  repo: n6g7/split
 - name: Cat
   emoji: 🐈
   description: Un chat
