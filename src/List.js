@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import Project from './Project'
 import projects from '../projects.yml'
+import linkIcon from "./link.svg"
 
 const Table = styled.table`
   border-collapse: collapse;
@@ -28,8 +29,36 @@ const Table = styled.table`
       padding-right: ${p => p.theme.spacing / 2}px;
     }
 
+    &.links a:not(:last-child) {
+      margin-right: 10px;
+    }
+
     p {
       margin: 0;
+    }
+
+    a.repository, a.homepage {
+      margin-left: 16px;
+      position: relative;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        height: 14px;
+        left: -16px;
+        opacity: 0.7;
+        position: absolute;
+        top: 3px;
+        width: 14px;
+      }
+    }
+
+    a.homepage::before {
+      background: url(${linkIcon});
+      background-size: contain;
+    }
+    a.repository::before {
+      background: url("https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg");
     }
   }
 
@@ -80,8 +109,7 @@ class List extends React.PureComponent {
       <thead>
         <tr>
           <th>Project</th>
-          <th>URL</th>
-          <th>Repo</th>
+          <th>Links</th>
           <th>Start date</th>
           <th>Last activity</th>
         </tr>

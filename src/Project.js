@@ -81,7 +81,7 @@ class Project extends React.PureComponent {
 
     const result = url.match(/^https?:\/\/([a-z0-9.-]+)(\/.*)?$/)
 
-    return <a href={url} title={name} target="blank">
+    return <a href={url} title={name} target="blank" className="homepage">
       {result ? result[1] : url}
     </a>
   }
@@ -90,7 +90,7 @@ class Project extends React.PureComponent {
     const { gh, repo } = this.state
 
     return (gh && gh.html_url && gh.full_name)
-      ? <a href={gh.html_url} target="blank">{gh.full_name}</a>
+      ? <a href={gh.html_url} target="blank" className="repository">{gh.full_name}</a>
       : <span>{repo}</span>
   }
 
@@ -130,8 +130,7 @@ class Project extends React.PureComponent {
         <Title new={isNew} data-emoji={emoji}>{name}</Title>
         <p>{description}</p>
       </td>
-      <td style={{"--label": '"URL"'}}>{ this.renderURL() }</td>
-      <td style={{"--label": '"Repo"'}}>{ this.renderRepo() }</td>
+      <td className="links" style={{"--label": '"Links"'}}>{ this.renderURL() }{ this.renderRepo() }</td>
       <td style={{"--label": '"Start date"'}}>{ this.renderStartDate() }</td>
       <td style={{"--label": '"Last activity"'}}>{ this.renderLastActivityDate() }</td>
     </tr>
