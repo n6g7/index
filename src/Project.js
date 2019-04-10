@@ -44,13 +44,13 @@ const aMonthAgo = moment().subtract(1, 'month')
 
 class Project extends React.PureComponent {
   static propTypes = {
-    project: PropTypes.object.isRequired
+    data: PropTypes.object.isRequired
   }
 
   constructor (props) {
     super(props)
 
-    this.state = props.project
+    this.state = props.data
   }
 
   componentDidMount () {
@@ -91,7 +91,7 @@ class Project extends React.PureComponent {
 
     return (gh && gh.html_url && gh.full_name)
       ? <a href={gh.html_url} target="blank" className="repository">{gh.full_name}</a>
-      : <span>{repo}</span>
+      : <span className="repository">{repo}</span>
   }
 
   renderStartDate () {
@@ -120,7 +120,6 @@ class Project extends React.PureComponent {
       emoji,
       gh,
       name,
-      url
     } = this.state
 
     const isNew = gh && gh.created_at && gh.created_at.isAfter(aMonthAgo)

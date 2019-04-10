@@ -2,12 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { ThemeProvider } from 'styled-components'
 
-import List from './List'
+import Projects from './Projects'
 import theme from './theme'
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
-    <List />
+    <Projects />
   </ThemeProvider>,
   document.getElementById('root')
 )

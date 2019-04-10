@@ -1,11 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import Project from './Project'
-import projects from '../projects.yml'
 import linkIcon from "./link.svg"
 
-const Table = styled.table`
+const StyledTable = styled.table`
   border-collapse: collapse;
   margin: auto;
   width: ${p => p.theme.containerWidth}px;
@@ -37,7 +36,7 @@ const Table = styled.table`
       margin: 0;
     }
 
-    a.repository, a.homepage {
+    .repository, .homepage {
       margin-left: 16px;
       position: relative;
 
@@ -53,11 +52,11 @@ const Table = styled.table`
       }
     }
 
-    a.homepage::before {
+    .homepage::before {
       background: url(${linkIcon});
       background-size: contain;
     }
-    a.repository::before {
+    .repository::before {
       background: url("https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg");
     }
   }
@@ -95,7 +94,6 @@ const Table = styled.table`
         &:nth-last-child(-n+4)::before {
           content: var(--label)": ";
           font-size: 0.9em;
-          /* font-style: italic; */
           opacity: 0.6;
         }
       }
@@ -103,24 +101,27 @@ const Table = styled.table`
   }
 `
 
-class List extends React.PureComponent {
+class Table extends React.PureComponent {
+  static propTypes = {
+    Component: PropTypes.func.isRequired,
+    headers: PropTypes.arrayOf(PropTypes.string).isRequired,
+    rows: PropTypes.arrayOf(PropTypes.any).isRequired,
+  }
+
   render () {
-    return <Table>
+    const { headers, rows, Component } = this.props
+
+    return <StyledTable>
       <thead>
         <tr>
-          <th>Project</th>
-          <th>Links</th>
-          <th>Start date</th>
-          <th>Last activity</th>
+          { headers.map((header, i) => <th key={i}>{header}</th>) }
         </tr>
       </thead>
       <tbody>
-        { projects.map((project, i) =>
-          <Project key={i} project={project} />
-        )}
+        { rows.map((row, i) => <Component key={i} data={row} />) }
       </tbody>
-    </Table>
+    </StyledTable>
   }
 }
 
-export default List
+export default Table
