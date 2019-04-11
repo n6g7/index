@@ -3,6 +3,13 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import linkIcon from "./link.svg"
+import movieIcon from "./movie.svg"
+
+const Title = styled.h3`
+  margin: 50px auto 20px;
+  opacity: 0.5;
+  width: ${p => p.theme.containerWidth}px;
+`
 
 const StyledTable = styled.table`
   border-collapse: collapse;
@@ -36,8 +43,8 @@ const StyledTable = styled.table`
       margin: 0;
     }
 
-    .repository, .homepage {
-      margin-left: 16px;
+    .repository, .homepage, .video {
+      margin-left: 18px;
       position: relative;
 
       &::before {
@@ -58,6 +65,10 @@ const StyledTable = styled.table`
     }
     .repository::before {
       background: url("https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg");
+    }
+    .video::before {
+      background: url(${movieIcon});
+      background-size: contain;
     }
   }
 
@@ -106,21 +117,25 @@ class Table extends React.PureComponent {
     Component: PropTypes.func.isRequired,
     headers: PropTypes.arrayOf(PropTypes.string).isRequired,
     rows: PropTypes.arrayOf(PropTypes.any).isRequired,
+    title: PropTypes.string.isRequired,
   }
 
   render () {
-    const { headers, rows, Component } = this.props
+    const { headers, rows, Component, title } = this.props
 
-    return <StyledTable>
-      <thead>
-        <tr>
-          { headers.map((header, i) => <th key={i}>{header}</th>) }
-        </tr>
-      </thead>
-      <tbody>
-        { rows.map((row, i) => <Component key={i} data={row} />) }
-      </tbody>
-    </StyledTable>
+    return <>
+      <Title>{title}</Title>
+      <StyledTable>
+        <thead>
+          <tr>
+            { headers.map((header, i) => <th key={i}>{header}</th>) }
+          </tr>
+        </thead>
+        <tbody>
+          { rows.map((row, i) => <Component key={i} data={row} />) }
+        </tbody>
+      </StyledTable>
+    </>
   }
 }
 
