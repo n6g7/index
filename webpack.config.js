@@ -4,7 +4,7 @@ module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: {
     main: './index.js',
-    head: './head.js'
+    css: './base.styl'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -35,7 +35,11 @@ module.exports = {
           'url-loader',
           'img-loader'
         ]
-      }
+      },
+      {
+        test: /\.styl$/,
+        use: ["style-loader", "css-loader", "stylus-loader"]
+      },
     ]
   },
   devServer: {
