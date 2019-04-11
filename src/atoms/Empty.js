@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export default styled.span`
   border-bottom: 1px ${p => p.theme.colours.grey} solid;

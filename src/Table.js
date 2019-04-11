@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import React from "react"
+import PropTypes from "prop-types"
+import styled from "styled-components"
 
 import linkIcon from "./link.svg"
 import movieIcon from "./movie.svg"
@@ -17,7 +17,8 @@ const StyledTable = styled.table`
   width: ${p => p.theme.containerWidth}px;
 
   thead {
-    td, th {
+    td,
+    th {
       border-bottom: 1px solid ${p => p.theme.colours.grey};
       font-size: 0.9em;
       font-variant: small-caps;
@@ -43,12 +44,14 @@ const StyledTable = styled.table`
       margin: 0;
     }
 
-    .repository, .homepage, .video {
+    .repository,
+    .homepage,
+    .video {
       margin-left: 18px;
       position: relative;
 
       &::before {
-        content: '';
+        content: "";
         display: inline-block;
         height: 14px;
         left: -16px;
@@ -102,8 +105,8 @@ const StyledTable = styled.table`
           }
         }
 
-        &:nth-last-child(-n+4)::before {
-          content: var(--label)": ";
+        &:nth-last-child(-n + 4)::before {
+          content: var(--label) ": ";
           font-size: 0.9em;
           opacity: 0.6;
         }
@@ -120,22 +123,28 @@ class Table extends React.PureComponent {
     title: PropTypes.string.isRequired,
   }
 
-  render () {
+  render() {
     const { headers, rows, Component, title } = this.props
 
-    return <>
-      <Title>{title}</Title>
-      <StyledTable>
-        <thead>
-          <tr>
-            { headers.map((header, i) => <th key={i}>{header}</th>) }
-          </tr>
-        </thead>
-        <tbody>
-          { rows.map((row, i) => <Component key={i} data={row} />) }
-        </tbody>
-      </StyledTable>
-    </>
+    return (
+      <>
+        <Title>{title}</Title>
+        <StyledTable>
+          <thead>
+            <tr>
+              {headers.map((header, i) => (
+                <th key={i}>{header}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((row, i) => (
+              <Component key={i} data={row} />
+            ))}
+          </tbody>
+        </StyledTable>
+      </>
+    )
   }
 }
 

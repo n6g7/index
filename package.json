@@ -8,7 +8,7 @@
     "build": "webpack -p --mode=production",
     "deploy": "firebase deploy",
     "dev": "webpack-dev-server --mode=development",
-    "pretest": "standard"
+    "test": "prettier -l \"src/**/*.js\""
   },
   "dependencies": {
     "color": "^3.1.0",
@@ -29,7 +29,7 @@
     "firebase-tools": "^6.6.0",
     "img-loader": "^3.0.1",
     "json-loader": "^0.5.7",
-    "standard": "^12.0.1",
+    "prettier": "^1.16.4",
     "style-loader": "^0.23.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",

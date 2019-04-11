@@ -8,7 +8,9 @@ export default ({ className, title, url }) => {
 
   const result = url.match(regex)
 
-  return <a href={url} title={title} target="blank" className={className}>
-    {result ? result[1] : url}
-  </a>
+  return (
+    <a href={url} title={title} target="blank" className={className}>
+      {result ? result[1] : url}
+    </a>
+  )
 }

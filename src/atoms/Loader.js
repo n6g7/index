@@ -1,5 +1,5 @@
 import React from "react"
 
-import loader from '../loader.svg'
+import loader from "../loader.svg"
 
-export default () => <img src={loader} alt='loader' />
+export default () => <img src={loader} alt="loader" />

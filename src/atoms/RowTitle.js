@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components'
-import moment from 'moment-he'
+import styled, { css } from "styled-components"
+import moment from "moment-he"
 
-const aMonthAgo = moment().subtract(1, 'month')
+const aMonthAgo = moment().subtract(1, "month")
 const isNew = date => moment(date).isAfter(aMonthAgo)
 
 export default styled.h3`
@@ -12,19 +12,21 @@ export default styled.h3`
   line-height: 1;
   margin: 0;
 
-  ${p => isNew(p.date) && css`
-    &::after {
-      background: ${p.theme.colours.yellow};
-      border-radius: 3px;
-      color: white;
-      content: 'New';
-      font-size: 0.8em;
-      font-weight: bolder;
-      letter-spacing: 0.5px;
-      margin: 0 ${p.theme.spacing/2}px;
-      padding: 2px 5px;
-    }
-  `}
+  ${p =>
+    isNew(p.date) &&
+    css`
+      &::after {
+        background: ${p.theme.colours.yellow};
+        border-radius: 3px;
+        color: white;
+        content: "New";
+        font-size: 0.8em;
+        font-weight: bolder;
+        letter-spacing: 0.5px;
+        margin: 0 ${p.theme.spacing / 2}px;
+        padding: 2px 5px;
+      }
+    `}
 
   &::before {
     content: attr(data-emoji);
