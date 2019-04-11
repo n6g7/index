@@ -3,14 +3,18 @@ import Empty from "./Empty"
 
 const regex = /^https?:\/\/([a-z0-9.-]+)(\/.*)?$/
 
-export default ({ className, title, url }) => {
+export default ({ className, text, title, url }) => {
   if (!url) return <Empty />
 
-  const result = url.match(regex)
+  if (!text) {
+    const result = url.match(regex)
+    if (result) text = result[1]
+    else text = url
+  }
 
   return (
     <a href={url} title={title} target="blank" className={className}>
-      {result ? result[1] : url}
+      {text}
     </a>
   )
 }

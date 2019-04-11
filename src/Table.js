@@ -3,7 +3,8 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 import linkIcon from "./link.svg"
-import movieIcon from "./movie.svg"
+import projectorIcon from "./projector.svg"
+import tvIcon from "./tv.svg"
 
 const Title = styled.h3`
   margin: 50px auto 20px;
@@ -46,6 +47,7 @@ const StyledTable = styled.table`
 
     .repository,
     .homepage,
+    .slides,
     .video {
       margin-left: 18px;
       position: relative;
@@ -70,7 +72,11 @@ const StyledTable = styled.table`
       background: url("https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg");
     }
     .video::before {
-      background: url(${movieIcon});
+      background: url(${tvIcon});
+      background-size: contain;
+    }
+    .slides::before {
+      background: url(${projectorIcon});
       background-size: contain;
     }
   }

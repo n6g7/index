@@ -9,7 +9,7 @@ class Talk extends React.PureComponent {
   }
 
   render() {
-    const { title, conference, emoji, video, date } = this.props.data
+    const { title, conference, emoji, video, date, slides } = this.props.data
 
     return (
       <tr>
@@ -20,6 +20,9 @@ class Talk extends React.PureComponent {
           <p>{conference}</p>
         </td>
         <td className="links" style={{ "--label": '"Links"' }}>
+          {slides && (
+            <Link className="slides" title={title} url={`/slides/${slides}`} text={slides} />
+          )}
           <Link className="video" title={title} url={video} />
         </td>
         <td style={{ "--label": '"Date"' }}>
