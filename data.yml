@@ -57,13 +57,13 @@ projects:
     repo: n6g7/metamorph
 talks:
   - title: Take the goRe out of the DjangoReact stack
-    emoji: 🐍
+    emoji: 🎷
     conference: DjangoCon Europe 2019
     date: 2019-04-10
     video: https://youtu.be/gyvz4q09zto?t=1524
     slides: djangojs2.pdf
   - title: Take the goRe out of the DjangoReact stack
     emoji: 🐍
-    conference: PyCon FR
+    conference: PyCon FR 2018
     date: 2018-10-07
     slides: djangojs.pdf

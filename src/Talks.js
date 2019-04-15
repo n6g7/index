@@ -7,7 +7,7 @@ import { talks } from "../data.yml"
 class Talks extends React.PureComponent {
   render() {
     return (
-      <Table title="Talks" headers={["Title", "Video", "Date"]} rows={talks} Component={Talk} />
+      <Table title="Talks" headers={["Title", "Links", "Date"]} rows={talks} Component={Talk} />
     )
   }
 }
