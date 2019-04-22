@@ -9,7 +9,11 @@ import tvIcon from "./tv.svg"
 const Title = styled.h3`
   margin: 50px auto 20px;
   opacity: 0.5;
-  width: ${p => p.theme.containerWidth}px;
+  max-width: ${p => p.theme.containerWidth}px;
+
+  @media (max-width: ${p => p.theme.containerWidth}px) {
+    padding: 0 ${p => p.theme.spacing}px;
+  }
 `
 
 const StyledTable = styled.table`
