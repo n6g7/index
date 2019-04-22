@@ -122,6 +122,14 @@ const StyledTable = styled.table`
         }
       }
     }
+
+    &.two-lines td:first-child {
+      flex-flow: column nowrap;
+
+      h3 {
+        margin-bottom: ${p => p.theme.spacing / 4}px;
+      }
+    }
   }
 `
 
@@ -134,12 +142,12 @@ class Table extends React.PureComponent {
   }
 
   render() {
-    const { headers, rows, Component, title } = this.props
+    const { headers, rows, Component, title, ...props } = this.props
 
     return (
       <>
         <Title>{title}</Title>
-        <StyledTable>
+        <StyledTable {...props}>
           <thead>
             <tr>
               {headers.map((header, i) => (
