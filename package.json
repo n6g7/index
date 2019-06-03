@@ -6,8 +6,8 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack -p --mode=production",
-    "deploy": "firebase deploy",
     "dev": "webpack-dev-server --mode=development",
+    "now-build": "yarn build",
     "test": "prettier -l \"src/**/*.js\""
   },
   "dependencies": {
@@ -26,7 +26,6 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^2.1.1",
-    "firebase-tools": "^6.10.0",
     "img-loader": "^3.0.1",
     "json-loader": "^0.5.7",
     "prettier": "^1.17.1",
