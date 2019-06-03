@@ -1,7 +1,7 @@
 {
   "version": 2,
   "name": "index",
-  "alias": "index.gnab.fr",
+  "alias": "gnab.fr",
   "builds": [
     {
       "src": "package.json",
