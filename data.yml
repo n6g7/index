@@ -33,7 +33,7 @@ projects:
   - name: Notes
     emoji: 📓
     description: A geeky notebook
-    url: https://notes.gnab.fr
+    url: https://theorem.space
     repo: n6g7/notes
   - name: Tint
     emoji: 🖼️
