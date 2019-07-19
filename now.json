@@ -5,7 +5,7 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@now/static-build"
+      "use": "@now/next"
     }
   ]
 }
