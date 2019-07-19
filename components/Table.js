@@ -2,10 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 
-import linkIcon from "./link.svg"
-import projectorIcon from "./projector.svg"
-import tvIcon from "./tv.svg"
-
 const Title = styled.h3`
   margin: 50px auto 20px;
   opacity: 0.5;
@@ -69,18 +65,18 @@ const StyledTable = styled.table`
     }
 
     .homepage::before {
-      background: url(${linkIcon});
+      background: url("/static/link.svg");
       background-size: contain;
     }
     .repository::before {
       background: url("https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg");
     }
     .video::before {
-      background: url(${tvIcon});
+      background: url("/static/tv.svg");
       background-size: contain;
     }
     .slides::before {
-      background: url(${projectorIcon});
+      background: url("/static/projector.svg");
       background-size: contain;
     }
   }
