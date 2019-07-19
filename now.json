@@ -3,9 +3,10 @@
   "name": "index",
   "alias": "gnab.fr",
   "builds": [
-    {
-      "src": "package.json",
-      "use": "@now/next"
-    }
+    { "src": "static/keybase.txt", "use": "@now/static" },
+    { "src": "package.json", "use": "@now/next" }
+  ],
+  "routes": [
+    { "src": "/keybase.txt", "dest": "static/keybase.txt" }
   ]
 }
