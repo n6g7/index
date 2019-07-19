@@ -1,41 +1,24 @@
 {
   "name": "index",
   "version": "0.1.0",
-  "main": "src/index.js",
   "author": "Nathan Gaberel <nathan@gnab.fr>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack -p --mode=production",
-    "dev": "webpack-dev-server --mode=development",
-    "now-build": "yarn build",
-    "test": "prettier -l \"src/**/*.js\""
+    "build": "next build",
+    "dev": "next",
+    "test": "prettier -l \"**/*.js\""
   },
   "dependencies": {
-    "color": "^3.1.2",
     "moment": "^2.24.0",
     "moment-he": "^0.2.0",
+    "next": "^9.0.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/preset-env": "^7.5.4",
-    "@babel/preset-react": "^7.0.0",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-loader": "^8.0.6",
-    "css-loader": "^3.1.0",
-    "img-loader": "^3.0.1",
-    "json-loader": "^0.5.7",
-    "prettier": "^1.18.2",
-    "style-loader": "^0.23.1",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2",
-    "url-loader": "^2.0.1",
-    "webpack": "^4.36.1",
-    "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.7.2",
-    "yaml-loader": "^0.5.0"
+    "babel-plugin-styled-components": "^1.10.6",
+    "js-yaml-loader": "^1.2.2",
+    "prettier": "^1.18.2"
   }
 }

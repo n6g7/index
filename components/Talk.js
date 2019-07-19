@@ -21,7 +21,7 @@ class Talk extends React.PureComponent {
         </td>
         <td className="links" style={{ "--label": '"Links"' }}>
           {slides && (
-            <Link className="slides" title={title} url={`/slides/${slides}`} text={slides} />
+            <Link className="slides" title={title} url={`/static/slides/${slides}`} text={slides} />
           )}
           <Link className="video" title={title} url={video} />
         </td>
