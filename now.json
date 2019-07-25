@@ -2,6 +2,7 @@
   "version": 2,
   "name": "index",
   "alias": "gnab.fr",
+  "regions": ["cdg", "lhr"],
   "builds": [
     { "src": "static/keybase.txt", "use": "@now/static" },
     { "src": "package.json", "use": "@now/next" }
