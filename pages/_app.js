@@ -18,9 +18,12 @@ export default class MyApp extends App {
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <title>gnab.fr</title>
+          <meta name="Description" content="Nathan Gaberel's homepage" />
           <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png" />
           <link rel="manifest" href="/static/manifest.json" />
+          <link rel="preconnect" href="https://www.google-analytics.com">
+          <link rel="preconnect" href="https://api.github.com">
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
