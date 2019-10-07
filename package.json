@@ -13,7 +13,7 @@
     "moment-he": "^0.2.0",
     "next": "^9.0.8",
     "react": "^16.10.1",
-    "react-dom": "^16.10.1",
+    "react-dom": "^16.10.2",
     "styled-components": "^4.4.0"
   },
   "devDependencies": {
