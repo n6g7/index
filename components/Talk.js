@@ -1,7 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { Link } from "@as0n/layout"
 
-import { Date, Link, RowTitle } from "./atoms"
+import { Date, RowTitle } from "./atoms"
 
 class Talk extends React.PureComponent {
   static propTypes = {
@@ -21,9 +22,14 @@ class Talk extends React.PureComponent {
         </td>
         <td className="links" style={{ "--label": '"Links"' }}>
           {slides && (
-            <Link className="slides" title={title} url={`/static/slides/${slides}`} text={slides} />
+            <Link
+              title={title}
+              url={`/static/slides/${slides}`}
+              text={slides}
+              icon="/static/projector.svg"
+            />
           )}
-          <Link className="video" title={title} url={video} />
+          <Link title={title} url={video} icon="/static/tv.svg" />
         </td>
         <td style={{ "--label": '"Date"' }}>
           <Date date={date} />

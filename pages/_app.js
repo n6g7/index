@@ -5,7 +5,7 @@ import React from "react"
 import { ThemeProvider } from "styled-components"
 
 import * as gtag from "../lib/gtag"
-import { theme, GlobalStyle } from "../style"
+import { theme, GlobalStyle } from "@as0n/layout"
 
 Router.events.on("routeChangeComplete", url => gtag.pageview(url))
 
@@ -15,7 +15,7 @@ export default class MyApp extends App {
     return (
       <Container>
         <Head>
-          <meta charset="utf-8" />
+          <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <title>gnab.fr</title>
           <meta name="Description" content="Nathan Gaberel's homepage" />

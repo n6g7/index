@@ -1,8 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import moment from "moment-he"
+import { Link } from "@as0n/layout"
 
-import { Date, Link, RowTitle } from "./atoms"
+import { Date, RowTitle } from "./atoms"
 
 class Project extends React.PureComponent {
   static propTypes = {
@@ -43,9 +44,11 @@ class Project extends React.PureComponent {
     const { gh, repo } = this.state
 
     return gh && gh.html_url && gh.full_name ? (
-      <a href={gh.html_url} target="blank" className="repository">
-        {gh.full_name}
-      </a>
+      <Link
+        icon="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg"
+        url={gh.html_url}
+        text={gh.full_name}
+      />
     ) : (
       <span className="repository">{repo}</span>
     )
@@ -63,7 +66,7 @@ class Project extends React.PureComponent {
           <p>{description}</p>
         </td>
         <td className="links" style={{ "--label": '"Links"' }}>
-          <Link className="homepage" title={name} url={url} />
+          <Link icon="/static/link.svg" title={name} url={url} />
           {this.renderRepo()}
         </td>
         <td style={{ "--label": '"Start date"' }}>
