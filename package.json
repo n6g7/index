@@ -14,7 +14,7 @@
     "moment-he": "^0.2.0",
     "next": "^9.2.2",
     "react": "^16.13.0",
-    "react-dom": "^16.12.0",
+    "react-dom": "^16.13.0",
     "styled-components": "^4.4.1"
   },
   "devDependencies": {
