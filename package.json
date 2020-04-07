@@ -6,7 +6,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next",
-    "test": "prettier -l \"**/*.js\""
+    "test": "prettier -l \"components/**/*.js\" -l \"lib/**/*.js\" -l \"pages/**/*.js\""
   },
   "dependencies": {
     "@as0n/layout": "^0.0.4",
@@ -20,6 +20,6 @@
   "devDependencies": {
     "babel-plugin-styled-components": "^1.10.7",
     "js-yaml-loader": "^1.2.2",
-    "prettier": "^1.19.1"
+    "prettier": "^2.0.4"
   }
 }
