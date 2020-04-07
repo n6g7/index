@@ -7,7 +7,7 @@ import { ThemeProvider } from "styled-components"
 import * as gtag from "../lib/gtag"
 import { theme, GlobalStyle } from "@as0n/layout"
 
-Router.events.on("routeChangeComplete", url => gtag.pageview(url))
+Router.events.on("routeChangeComplete", (url) => gtag.pageview(url))
 
 export default class MyApp extends App {
   render() {

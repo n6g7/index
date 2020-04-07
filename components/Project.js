@@ -21,12 +21,12 @@ class Project extends React.PureComponent {
 
     window
       .fetch(`https://api.github.com/repos/${this.state.repo}`)
-      .then(res => {
+      .then((res) => {
         if (res.ok) return res
         else throw new Error("Meh")
       })
-      .then(res => res.json())
-      .then(data =>
+      .then((res) => res.json())
+      .then((data) =>
         this.setState({
           gh: {
             created_at: moment(data.created_at),
