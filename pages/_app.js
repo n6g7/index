@@ -47,4 +47,13 @@ function MyApp({ Component, pageProps }) {
   )
 }
 
+export function reportWebVitals({ id, name, label, value }) {
+  window.gtag("event", name, {
+    event_category: `Next.js ${label} metric`,
+    event_label: id, // id unique to current page load
+    value: Math.round(name === "CLS" ? value * 1000 : value), // values must be integers
+    non_interaction: true, // avoids affecting bounce rate.
+  })
+}
+
 export default MyApp
