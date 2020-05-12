@@ -66,7 +66,7 @@ class Project extends React.PureComponent {
           <p>{description}</p>
         </td>
         <td className="links" style={{ "--label": '"Links"' }}>
-          <Link icon="/static/link.svg" title={name} url={url} />
+          <Link icon="/link.svg" title={name} url={url} />
           {this.renderRepo()}
         </td>
         <td style={{ "--label": '"Start date"' }}>

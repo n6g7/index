@@ -22,14 +22,9 @@ class Talk extends React.PureComponent {
         </td>
         <td className="links" style={{ "--label": '"Links"' }}>
           {slides && (
-            <Link
-              title={title}
-              url={`/static/slides/${slides}`}
-              text={slides}
-              icon="/static/projector.svg"
-            />
+            <Link title={title} url={`/slides/${slides}`} text={slides} icon="/projector.svg" />
           )}
-          <Link title={title} url={video} icon="/static/tv.svg" />
+          <Link title={title} url={video} icon="/tv.svg" />
         </td>
         <td style={{ "--label": '"Date"' }}>
           <Date date={date} />

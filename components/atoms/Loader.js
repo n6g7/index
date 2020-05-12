@@ -1,3 +1,3 @@
 import React from "react"
 
-export default () => <img src="/static/loader.svg" alt="loader" />
+export default () => <img src="/loader.svg" alt="loader" />
