@@ -6,7 +6,8 @@
   "scripts": {
     "build": "next build",
     "dev": "next",
-    "test": "prettier -l \"components/**/*\" -l \"lib/**/*\" -l \"pages/**/*\""
+    "format": "prettier -l \"components/**/*\" -l \"lib/**/*\" -l \"pages/**/*\"",
+    "tsc": "tsc"
   },
   "dependencies": {
     "@as0n/layout": "^0.0.4",

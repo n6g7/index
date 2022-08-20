@@ -2,6 +2,8 @@ import React from "react";
 
 import Talk from "./Talk";
 import { Table } from "@as0n/layout";
+
+// @ts-ignore
 import { talks } from "../data.yml";
 
 const Talks = () => {

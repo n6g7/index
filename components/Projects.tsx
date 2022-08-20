@@ -2,6 +2,8 @@ import React from "react";
 
 import Project from "./Project";
 import { Table } from "@as0n/layout";
+
+// @ts-ignore
 import { projects } from "../data.yml";
 
 const Projects = () => {
