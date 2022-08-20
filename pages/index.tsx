@@ -1,4 +1,5 @@
-import { Footer, Projects, Talks } from "../components"
+import React from "react";
+import { Footer, Projects, Talks } from "../components";
 
 const Index = () => (
   <>
@@ -8,6 +9,6 @@ const Index = () => (
     <Talks />
     <Footer />
   </>
-)
+);
 
-export default Index
+export default Index;

@@ -1,8 +1,8 @@
-import styled, { css } from "styled-components"
-import moment from "moment-he"
+import styled, { css } from "styled-components";
+import moment from "moment-he";
 
-const aMonthAgo = moment().subtract(1, "month")
-const isNew = (date) => moment(date).isAfter(aMonthAgo)
+const aMonthAgo = moment().subtract(1, "month");
+const isNew = (date) => moment(date).isAfter(aMonthAgo);
 
 export default styled.h3`
   align-items: center;
@@ -33,4 +33,4 @@ export default styled.h3`
     font-size: 1.2em;
     margin-right: 5px;
   }
-`
+`;
