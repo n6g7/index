@@ -1,15 +1,22 @@
+import Image from "next/image";
+import React from "react";
+
 const Footer = () => (
   <footer>
     <a href="https://github.com/n6g7" target="blank" title="GitHub">
-      <img
+      <Image
         height="16"
         width="16"
         src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg"
         alt="GitHub"
       />
     </a>
-    <a href="https://stackoverflow.com/users/story/2121761" target="blank" title="StackOverflow">
-      <img
+    <a
+      href="https://stackoverflow.com/users/story/2121761"
+      target="blank"
+      title="StackOverflow"
+    >
+      <Image
         height="16"
         width="16"
         src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/stackoverflow.svg"
@@ -17,7 +24,7 @@ const Footer = () => (
       />
     </a>
     <a href="https://keybase.io/n6g7" target="blank" title="Keybase">
-      <img
+      <Image
         height="16"
         width="16"
         src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/keybase.svg"
@@ -25,6 +32,6 @@ const Footer = () => (
       />
     </a>
   </footer>
-)
+);
 
-export default Footer
+export default Footer;

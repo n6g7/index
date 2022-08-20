@@ -6,20 +6,28 @@
   "scripts": {
     "build": "next build",
     "dev": "next",
-    "test": "prettier -l \"components/**/*.js\" -l \"lib/**/*.js\" -l \"pages/**/*.js\""
+    "test": "prettier -l \"components/**/*\" -l \"lib/**/*\" -l \"pages/**/*\""
   },
   "dependencies": {
     "@as0n/layout": "^0.0.4",
-    "moment": "^2.29.1",
+    "moment": "^2.29.4",
     "moment-he": "^0.2.0",
-    "next": "^10.0.5",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "styled-components": "^4.4.1"
+    "next": "^12.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.12.0",
+    "@types/node": "^18.7.8",
+    "@types/react": "^18.0.17",
+    "babel-plugin-styled-components": "^2.0.7",
+    "eslint": "8.22.0",
+    "eslint-config-next": "12.2.5",
     "js-yaml-loader": "^1.2.2",
-    "prettier": "^2.2.1"
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
