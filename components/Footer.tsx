@@ -11,24 +11,24 @@ const Footer = () => (
         alt="GitHub"
       />
     </a>
-    <a
-      href="https://stackoverflow.com/users/story/2121761"
-      target="blank"
-      title="StackOverflow"
-    >
-      <Image
-        height="16"
-        width="16"
-        src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/stackoverflow.svg"
-        alt="StackOverflow"
-      />
-    </a>
     <a href="https://keybase.io/n6g7" target="blank" title="Keybase">
       <Image
         height="16"
         width="16"
         src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/keybase.svg"
         alt="Keybase"
+      />
+    </a>
+    <a
+      href="https://www.linkedin.com/in/ngaberel/"
+      target="blank"
+      title="Keybase"
+    >
+      <Image
+        height="16"
+        width="16"
+        src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg"
+        alt="LinkedIn"
       />
     </a>
   </footer>
