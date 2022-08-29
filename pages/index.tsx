@@ -3,8 +3,7 @@ import { Footer, Projects, Talks } from "../components";
 
 const Index = () => (
   <>
-    <h1>gnab.fr</h1>
-    <h2>Nathan Gaberel</h2>
+    <h1>Nathan Gaberel</h1>
     <Projects />
     <Talks />
     <Footer />

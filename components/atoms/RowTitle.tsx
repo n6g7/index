@@ -9,6 +9,7 @@ export default styled.h3`
   display: flex;
   flex-flow: row nowrap;
   font-size: inherit;
+  font-weight: 600;
   line-height: 1;
   margin: 0;
 

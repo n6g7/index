@@ -14,17 +14,16 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>gnab.fr</title>
+        <title>Nathan Gaberel</title>
         <meta name="Description" content="Nathan Gaberel's homepage" />
         <link rel="icon" type="image/svg" href="/favicon.svg" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="preconnect" href="https://api.github.com" />
-        <meta property="og:title" content="gnab.fr" />
-        <meta property="og:description" content="Nathan Gaberel" />
+        <meta property="og:title" content="Nathan Gaberel" />
         <meta
           property="og:image"
-          content="https://gnab.fr/android-chrome-144x144.png"
+          content="https://nathan.gaberel.fr/android-chrome-144x144.png"
         />
       </Head>
       <GlobalStyle />
