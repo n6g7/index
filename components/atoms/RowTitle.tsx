@@ -4,7 +4,11 @@ import moment from "moment-he";
 const aMonthAgo = moment().subtract(1, "month");
 const isNew = (date) => moment(date).isAfter(aMonthAgo);
 
-export default styled.h3`
+interface Props {
+  date?: string;
+}
+
+export default styled.h3<Props>`
   align-items: center;
   display: flex;
   flex-flow: row nowrap;
