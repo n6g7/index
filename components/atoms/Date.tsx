@@ -12,7 +12,7 @@ interface Props {
 
 const Date = ({ date, loading = false, noLoader = false }: Props) => {
   return date && !loading ? (
-    <span>{moment(date).humanEra("LL")}</span>
+    <span>{moment(date).format("LL")}</span>
   ) : loading && !noLoader ? (
     <Loader />
   ) : (
