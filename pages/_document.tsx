@@ -1,6 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
 import { ServerStyleSheet } from "styled-components";
+import { Fonts } from "@as0n/layout";
 
 import * as gtag from "../lib/gtag";
 
@@ -34,7 +35,9 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <Fonts />
+        </Head>
         <body>
           <Main />
           <NextScript />

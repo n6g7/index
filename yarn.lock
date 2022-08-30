@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@as0n/layout@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@as0n/layout/-/layout-0.1.0.tgz#cf4f4f3e9b7561dd9d13fd9ce30405ad8afb24e1"
-  integrity sha512-JmuEnP0CMzB8gh2j1SM7+OgyM/rPdSo8dEIY4yBxrd/I5ruphQZRQIze4ukkel6GBlpnOee90PQwa9jPmTQvCA==
+"@as0n/layout@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@as0n/layout/-/layout-0.1.1.tgz#16493835931281b0fa3d9606932556544b69e92d"
+  integrity sha512-73d5nSvcIw7Q8DnojdB6DRHb9E0c4pU18tLMTMH562GVe/csuk7cA3S4gzGWY4ppzPCfFl993FQDayMYip0Hag==
 
 "@babel/code-frame@^7.18.6":
   version "7.18.6"
