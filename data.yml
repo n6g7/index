@@ -3,7 +3,7 @@ projects:
   - name: notion-cms
     emoji: 📑
     description: Notion as a headless CMS
-    url: https://github.com/n6g7/notion-cms
+    url: https://notion-cms.js.org
     repo: n6g7/notion-cms
   - name: httpdf
     emoji: 📜
