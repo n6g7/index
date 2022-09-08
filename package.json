@@ -27,7 +27,7 @@
     "eslint-config-next": "12.2.5",
     "js-yaml-loader": "^1.2.2",
     "prettier": "^2.7.1",
-    "typescript": "^4.8.2"
+    "typescript": "^4.8.3"
   },
   "engines": {
     "node": "16.x"
