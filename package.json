@@ -13,7 +13,7 @@
     "@as0n/layout": "^0.1.1",
     "moment": "^2.29.4",
     "moment-he": "^0.2.0",
-    "next": "^12.2.5",
+    "next": "^13.0.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.5"
