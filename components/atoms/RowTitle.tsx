@@ -24,7 +24,7 @@ export default styled.h3<Props>`
         background: ${p.theme.colours.yellow};
         border-radius: 3px;
         color: white;
-        content: "New";
+        content: "new";
         font-size: 0.8em;
         font-weight: bolder;
         letter-spacing: 0.5px;
