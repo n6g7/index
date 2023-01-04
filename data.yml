@@ -1,5 +1,10 @@
 ---
 projects:
+  - name: bingo
+    emoji: 🤡
+    description: DNS records management for Consul services
+    url: https://hub.docker.com/r/n6g7/bingo
+    repo: n6g7/bingo
   - name: notion-cms
     emoji: 📑
     description: Notion as a headless CMS
@@ -10,36 +15,16 @@ projects:
     description: PDF over HTTP
     url: https://hub.docker.com/r/n6g7/httpdf/
     repo: n6g7/httpdf
-  # - name: Bataille
-  #   emoji: 🃏
-  #   description: Card game simulator
-  #   url: https://bataille-umpozclhim.now.sh
-  #   repo: n6g7/bataille
   - name: Auto Kaizen
     emoji: 📈
     description: Defect tracking on Trello
     url: https://kaizen.gnab.fr
     repo: n6g7/autokaizen
-  # - name: Cat
-  #   emoji: 🐈
-  #   description: Un chat
-  #   url: https://cat.gnab.fr
-  #   repo: n6g7/cat
   - name: redux-saga-firebase
     emoji: 🔥
     description: Redux-saga for firebase
     url: https://redux-saga-firebase.js.org/
     repo: n6g7/redux-saga-firebase
-  - name: Cookbook
-    emoji: 🍳
-    description: Recipe collection
-    url: https://cook.gnab.fr
-    repo: n6g7/cookbook
-  # - name: Notes
-  #   emoji: 📓
-  #   description: A geeky notebook
-  #   url: https://theorem.space
-  #   repo: n6g7/notes
   - name: Tint
     emoji: 🖼️
     description: Colour extractor
@@ -50,16 +35,12 @@ projects:
     description: Book shelves
     url: https://chapter.gnab.fr
     repo: n6g7/chapter
-  - name: Wikitranslate
-    emoji: 💬
-    description: A smart translator
-    url: https://translate.gnab.fr
-    repo: wikitranslate/wikitranslate
-  - name: Metamorph
-    emoji: 👩‍🎨
-    description: Frontend stuff compiler
-    url: https://metamorph.charlottebretonsch.com
-    repo: n6g7/metamorph
+  # - name: Wikitranslate
+  #   emoji: 💬
+  #   description: A smart translator
+  #   url: https://translate.gnab.fr
+  #   repo: wikitranslate/wikitranslate
+
 talks:
   - title: Take the goRe out of the DjangoReact stack
     emoji: 🎷
