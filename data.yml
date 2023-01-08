@@ -2,7 +2,7 @@
 projects:
   - name: bingo
     emoji: 🤡
-    description: DNS records for Consul services
+    description: DNS records for reverse proxies
     url: https://hub.docker.com/r/n6g7/bingo
     repo: n6g7/bingo
   - name: notion-cms
